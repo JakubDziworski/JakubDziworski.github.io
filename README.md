@@ -1,16 +1,23 @@
-A [Jekyll](https://jekyllrb.com/) blog template made for simple, readable snippets of your brain drippings.
+# material-jekyll-theme
+[Demo](http://alexcarpenter.me/material-jekyll-theme)
 
-[DEMO](http://adueck.github.io/cayman-blog/)
+![Material Jekyll Theme](https://d13yacurqjgara.cloudfront.net/users/37718/screenshots/2430279/slice_1.jpg)
 
-To get this going follow these simple steps:
+## Getting started
+1. `git clone https://github.com/alexcarpenter/material-jekyll-theme.git`
+2. `cd material-jekyll-theme`
+3. Configure the `_config.yml` file as needed
+4. `jekyll serve`
 
-1. Fork, clone, or download the repository
-2. Edit <code>_config.yml</code>
-3. If you want, swap `img/cover.jpg` for your own header image
-3. Fill up the `_posts` folder with whatever you want to say
-4. run <code>jekyll build</code> and then <code>jekyll serve</code>  
-note: This will require the `jekyll-paginate` gem `$ gem install jekyll-paginate`
+## Options
+Customize your options within the `_config.yml` file.
 
-You can easily host your blog for free on [GitHub Pages](https://pages.github.com/)
-
-I made this Jekyll theme by adapting and modifying the [Cayman Theme](https://github.com/jasonlong/cayman-theme) by [Jason Lang](https://github.com/jasonlong), which is licensed under a [Creative Commons Attribution 4.0 International license](http://creativecommons.org/licenses/by/4.0/).
++ Theme
+  - Green
+  - Blue
+  - Orange
+  - Purple
+  - Grey
++ Fixed Navigation
+  - True
+  - False

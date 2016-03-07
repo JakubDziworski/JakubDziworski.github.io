@@ -1,23 +1,23 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely need to edit after that.
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'jekyll serve'. If you change this file, please restart the server process.
-
 # Site settings
-title: Your Blog Title
-description: '' # write a nice description for your blog
-baseurl: '' # the subpath of your site, e.g. /blog
-url: '' # the base hostname & protocol for your site http://www.example.com
-# google_analytics: 'UA-XXXXXX-X'
-twitter_username: 'twitter_username'
+title: Alex Carpenter
+email: your-email@domain.com
+description: >
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
+baseurl: "/material-jekyll-theme"
+url: "http://alexcarpenter.me"
+fixedNav: 'true' # true or false
+theme: purple # green, blue, orange, purple, grey
+twitterUsername: hybrid_alex
+githubUsername: alexcarpenter
+dribbbleUsername:
+codepenUsername:
 
 # Build settings
+permalink: /:year/:month/:title
 markdown: kramdown
-
-permalink: '/:title/'
-
-gems: [jekyll-paginate]
-
-paginate: 10
+include: [_pages]
+exclude: [_site, CHANGELOG.md, LICENSE, README.md]
+sass:
+  style: compressed
