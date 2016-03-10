@@ -7,66 +7,39 @@
 		<atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
-				<title>Hello World!</title>
-				<description>&lt;p&gt;&lt;strong&gt;dbyll&lt;/strong&gt; is minimalist, stylish theme for jekyll. Supports gravatar, account links (github, twitter, e-mail, pinterest, résume file) and a bio.&lt;/p&gt;
+				<title>Writing your own JVM language [PART 1] - Enkel</title>
+				<description>&lt;p&gt;As I mentioned in previous post I am participating in &lt;a href=&quot;http://www.maciejaniserowicz.com/daj-sie-poznac&quot;&gt;“Daj się poznać” contest&lt;/a&gt;. The goal of the contest is to implement any project and document it’s development process by blogging.   &lt;br /&gt;
+I came up with an idea of creating my own simple JVM language and compiler (because why the hell not)?   &lt;br /&gt;
+The language is called &lt;strong&gt;Enkel&lt;/strong&gt;, which means “simple” in swedish. &lt;br /&gt;
+The reasons why I decided to go with language running on JVM are:&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;dbyll&lt;/strong&gt; is brought to you by &lt;strong&gt;&lt;a href=&quot;http://ismaildemirbilek.com&quot;&gt;dbtek&lt;/a&gt;&lt;/strong&gt;. Open sourced under &lt;a href=&quot;http://opensource.org/licenses/MIT&quot;&gt;MIT&lt;/a&gt; license.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;JVM specification is very well documented.&lt;/li&gt;
+  &lt;li&gt;JVM languages can be mixed with each other - Enkel will be able to use Java libraries.&lt;/li&gt;
+  &lt;li&gt;I know Java fairly well (lexer,parser and compiler will be written in this language).&lt;/li&gt;
+  &lt;li&gt;There are some good Java libraries for manipulating bytecode.&lt;/li&gt;
+  &lt;li&gt;There are many things to “improve” in Java language.&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;h3 id=&quot;dbyll-is-on-github&quot;&gt;dbyll is on GitHub&lt;/h3&gt;
-
-&lt;p&gt;&lt;a class=&quot;btn btn-default&quot; href=&quot;https://github.com/dbtek/dbyll&quot;&gt;Grab your copy now!&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Over the next 10 weeks I will be describing the implementation process, so stay tuned.&lt;/p&gt;
 </description>
-				<pubDate>Fri, 15 Nov 2013 00:00:00 +0100</pubDate>
-				<link>/general/setup/demo/2013/11/15/hello-world.html</link>
-				<guid isPermaLink="true">/general/setup/demo/2013/11/15/hello-world.html</guid>
+				<pubDate>Thu, 10 Mar 2016 00:00:00 +0100</pubDate>
+				<link>/enkel/2016/03/10/enkel_first.html</link>
+				<guid isPermaLink="true">/enkel/2016/03/10/enkel_first.html</guid>
 			</item>
 		
 			<item>
-				<title>Configuration</title>
-				<description>&lt;p&gt;In your config file change these settings&lt;/p&gt;
+				<title>Why blog?</title>
+				<description>&lt;p&gt;I’ve never thought about running my own blog until I came across &lt;a href=&quot;http://www.maciejaniserowicz.com/daj-sie-poznac&quot;&gt;&lt;strong&gt;“Daj się poznać” contest&lt;/strong&gt;&lt;/a&gt;. The main point of the
+event is to make programmers realize that blogging can be enjoyable and very beneficial activity.&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-yaml&quot; data-lang=&quot;yaml&quot;&gt;&lt;span class=&quot;l-Scalar-Plain&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;dbyll&lt;/span&gt;
-&lt;span class=&quot;l-Scalar-Plain&quot;&gt;author&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt;  
-  &lt;span class=&quot;l-Scalar-Plain&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;yourname&lt;/span&gt;  
-  &lt;span class=&quot;l-Scalar-Plain&quot;&gt;email&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;youremail&lt;/span&gt;  
-  &lt;span class=&quot;l-Scalar-Plain&quot;&gt;github&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;asd123&lt;/span&gt;  
-  &lt;span class=&quot;l-Scalar-Plain&quot;&gt;twitter&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;asd123&lt;/span&gt;  
-  &lt;span class=&quot;l-Scalar-Plain&quot;&gt;pinterest&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;asd123&lt;/span&gt;  
-  &lt;span class=&quot;l-Scalar-Plain&quot;&gt;linkedin&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;asd123&lt;/span&gt;  
-  &lt;span class=&quot;l-Scalar-Plain&quot;&gt;resume&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;asd123&lt;/span&gt;  
-  &lt;span class=&quot;l-Scalar-Plain&quot;&gt;bio&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;Your stylish,  minimalist theme!&lt;/span&gt;  
-  &lt;span class=&quot;l-Scalar-Plain&quot;&gt;email_md5&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;md5ofemail&lt;/span&gt;  &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;p&gt;For me it is a great way to archive projects’ development process. Sure you can store your code in repository and dig into it some time in the future. It is however certain that you will forget some (most?) of the concepts that were in your head during development. Blogging is a great way to preserve that concepts. There is also a slight chance that other people might read your stuff and learn something. How many times have you struggled on some complex problem until you found that one awesome post on someone’s blog? I’ve been there many times.&lt;/p&gt;
+
+&lt;p&gt;There just so many benefits of blogging, so why should one not do it?&lt;/p&gt;
 </description>
-				<pubDate>Fri, 15 Nov 2013 00:00:00 +0100</pubDate>
-				<link>/general/setup/demo/2013/11/15/configuration.html</link>
-				<guid isPermaLink="true">/general/setup/demo/2013/11/15/configuration.html</guid>
-			</item>
-		
-			<item>
-				<title>Sample</title>
-				<description>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
-
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;foo&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;foo&amp;#39;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-</description>
-				<pubDate>Thu, 14 Nov 2013 00:00:00 +0100</pubDate>
-				<link>/general/demo/2013/11/14/sample.html</link>
-				<guid isPermaLink="true">/general/demo/2013/11/14/sample.html</guid>
-			</item>
-		
-			<item>
-				<title>Sample 2</title>
-				<description>&lt;p&gt;Lorem ipsum dolor sit amet,  consectetur adipisicing elit,  sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,  sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
-
-&lt;p&gt;Lorem ipsum dolor sit amet,  consectetur adipisicing elit,  sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,  sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
-</description>
-				<pubDate>Thu, 14 Nov 2013 00:00:00 +0100</pubDate>
-				<link>/general/demo/sample/2013/11/14/sample-2.html</link>
-				<guid isPermaLink="true">/general/demo/sample/2013/11/14/sample-2.html</guid>
+				<pubDate>Wed, 09 Mar 2016 00:00:00 +0100</pubDate>
+				<link>/non-tech/2016/03/09/why_blog.html</link>
+				<guid isPermaLink="true">/non-tech/2016/03/09/why_blog.html</guid>
 			</item>
 		
 	</channel>

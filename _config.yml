@@ -5,26 +5,26 @@ paginate_path: "page:num"
 exclude: ["README.md"] # files to exclude
 highlighter: pygments
 markdown: kramdown
-disqus: dbyll
-google_analytics: dbyll
+disqus: jakubdziworski
+google_analytics:
 
 defaults:
   -
     scope:
       path: "" # empty string for all files
     values:
-      title: dbyll
+      title: Kuba Dziworski
 
 description: Stylish Jekyll Theme
 author:
-  name: dbyll
-  email: dbyll@ismaildemirbilek.com
-  github: dbtek
-  twitter: dbtek
-  pinterest: asd123
-  linkedin: asd123
-  bio: Your stylish, minimalist theme!
-  email_md5: 726351295ec82e145928582f595aa3aa
+  name: Kuba Dziworski
+  email: jakub.dziworski@gmail.com
+  github: jakubdziworski
+  twitter: kubadziworski
+  pinterest: kubadziworski
+  linkedin: jakub-dziworski-795079105
+  bio: Software Dev Blog
+  email_md5: a90846857e328572041910f988965bbf
 
 rss_path: feed.xml
 categories_path: categories.html
