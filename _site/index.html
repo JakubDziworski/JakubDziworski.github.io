@@ -215,33 +215,34 @@
 
 <p>Compiler traverses the tree and maps it into valid bytecode instructions.</p>
 
-<p><br></p>
+<h2 id="example">Example</h2>
 
+<p>Let&#39;s assume we&#39;d like to execute <code>int x=a*5+2;</code> expression.
 <div class="mermaid" style="">
 graph LR
-        A["
+        A[&quot;
         Input Code<br><br>
         int x=a*5+2;
-        "]
-        B["
+        &quot;]
+        B[&quot;
           Tokens<br><br>{type,int},
           <br>{identifier,x}
           <br>{operator,=}
           <br>{identifier,a}
-          <br>{operator,*}
+          <br>{operator,<em>}
           <br>{number,5}
           <br>{operator,+}
           <br>{number,2}
           <br>{keyword,;}
-          "]
-          A-->|LEXER|B
-          B-->|PARSER|EQUALS
+          &quot;]
+          A--&gt;|LEXER|B
+          B--&gt;|PARSER|EQUALS
         subgraph Abstract Syntax Tree
-        EQUALS["="]
-        VARX["x"]
-        VARA["a"]
-        MULTIPLY["*"]
-        PLUS["+"]
+        EQUALS[&quot;=&quot;]
+        VARX[&quot;x&quot;]
+        VARA[&quot;a&quot;]
+        MULTIPLY[&quot;</em>&quot;]
+        PLUS[&quot;+&quot;]
         FIVE[5]
         TWO[2]
         EQUALS---PLUS
@@ -252,6 +253,7 @@ graph LR
         MULTIPLY---VARA
         end
 </div>
+Afterwards the abstract syntax tree is &quot;converted&quot; to bytecode.</p>
 
     
   </div>

@@ -22,9 +22,9 @@ Lexer takes simple text input and tokenizes it. The code is no longer a meaningl
 ###Compiler
 Compiler traverses the tree and maps it into valid bytecode instructions.
 
-<br>
+##Example
 
-
+Let's assume we'd like to execute ```int x=a*5+2;``` expression.
 <div class="mermaid" style="">
 graph LR
         A["
@@ -60,3 +60,4 @@ graph LR
         MULTIPLY---VARA
         end
 </div>
+Afterwards the abstract syntax tree is "converted" to bytecode.

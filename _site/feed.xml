@@ -46,33 +46,34 @@
 
 &lt;p&gt;Compiler traverses the tree and maps it into valid bytecode instructions.&lt;/p&gt;
 
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;h2 id=&quot;example&quot;&gt;Example&lt;/h2&gt;
 
+&lt;p&gt;Let&amp;#39;s assume we&amp;#39;d like to execute &lt;code&gt;int x=a*5+2;&lt;/code&gt; expression.
 &lt;div class=&quot;mermaid&quot; style=&quot;&quot;&gt;
 graph LR
-        A[&quot;
+        A[&amp;quot;
         Input Code&lt;br&gt;&lt;br&gt;
         int x=a*5+2;
-        &quot;]
-        B[&quot;
+        &amp;quot;]
+        B[&amp;quot;
           Tokens&lt;br&gt;&lt;br&gt;{type,int},
           &lt;br&gt;{identifier,x}
           &lt;br&gt;{operator,=}
           &lt;br&gt;{identifier,a}
-          &lt;br&gt;{operator,*}
+          &lt;br&gt;{operator,&lt;em&gt;}
           &lt;br&gt;{number,5}
           &lt;br&gt;{operator,+}
           &lt;br&gt;{number,2}
           &lt;br&gt;{keyword,;}
-          &quot;]
-          A--&gt;|LEXER|B
-          B--&gt;|PARSER|EQUALS
+          &amp;quot;]
+          A--&amp;gt;|LEXER|B
+          B--&amp;gt;|PARSER|EQUALS
         subgraph Abstract Syntax Tree
-        EQUALS[&quot;=&quot;]
-        VARX[&quot;x&quot;]
-        VARA[&quot;a&quot;]
-        MULTIPLY[&quot;*&quot;]
-        PLUS[&quot;+&quot;]
+        EQUALS[&amp;quot;=&amp;quot;]
+        VARX[&amp;quot;x&amp;quot;]
+        VARA[&amp;quot;a&amp;quot;]
+        MULTIPLY[&amp;quot;&lt;/em&gt;&amp;quot;]
+        PLUS[&amp;quot;+&amp;quot;]
         FIVE[5]
         TWO[2]
         EQUALS---PLUS
@@ -83,6 +84,7 @@ graph LR
         MULTIPLY---VARA
         end
 &lt;/div&gt;
+Afterwards the abstract syntax tree is &amp;quot;converted&amp;quot; to bytecode.&lt;/p&gt;
 </description>
 				<pubDate>Fri, 11 Mar 2016 00:00:00 +0100</pubDate>
 				<link>/enkel/2016/03/11/enkel_2_technology.html</link>
