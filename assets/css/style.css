@@ -3,7 +3,28 @@
 body{
 	color: #2c3e50;
 }
-
+table {
+    border:#000000 1px solid;
+    border-radius:3px;
+}
+table th {
+	  background: #DDDDDD;
+    padding:21px 25px 22px 25px;
+    border-top:1px solid #000000;
+    border-bottom:1px solid #000000;
+    border-left: 1px solid #000000;
+		text-align: center;
+}
+table tr {
+    padding-left:20px;
+}
+table td {
+    padding:18px;
+    border-top: 1px solid #000000;
+    border-bottom:1px solid #000000;
+    border-left: 1px solid #000000;
+		text-align: center;
+}
 .sidebar {
 	position: fixed;
 	top: 0px;
@@ -182,4 +203,3 @@ footer {
 ul.dropdown-menu>li>a>i.fa {
     width: 1.3em;
 }
-

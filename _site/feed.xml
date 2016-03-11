@@ -7,18 +7,101 @@
 		<atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
-				<title>Writing your own JVM language [PART 1] - Enkel</title>
-				<description>&lt;p&gt;As I mentioned in previous post I am participating in &lt;a href=&quot;http://www.maciejaniserowicz.com/daj-sie-poznac&quot;&gt;“Daj się poznać” contest&lt;/a&gt;. The goal of the contest is to implement any project and document it’s development process by blogging.   &lt;br /&gt;
-I came up with an idea of creating my own simple JVM language and compiler (because why the hell not)?   &lt;br /&gt;
-The language is called &lt;strong&gt;Enkel&lt;/strong&gt;, which means “simple” in swedish. &lt;br /&gt;
-The reasons why I decided to go with language running on JVM are:&lt;/p&gt;
+				<title>Creating JVM language [PART 2] - Minimum theory</title>
+				<description>&lt;p&gt;At the very highest level of abstraction we&amp;#39;ll need to implement three modules.&lt;/p&gt;
+
+&lt;table&gt;&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Module&lt;/th&gt;
+&lt;th&gt;Takes&lt;/th&gt;
+&lt;th&gt;Returns&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Lexer&lt;/td&gt;
+&lt;td&gt;Text (Code)&lt;/td&gt;
+&lt;td&gt;Tokens&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Parser&lt;/td&gt;
+&lt;td&gt;Tokens&lt;/td&gt;
+&lt;td&gt;AST (Abstract Syntax Tree)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Compiler&lt;/td&gt;
+&lt;td&gt;AST&lt;/td&gt;
+&lt;td&gt;JVM Bytecode&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+
+&lt;h3 id=&quot;lexer&quot;&gt;Lexer&lt;/h3&gt;
+
+&lt;p&gt;Lexer takes simple text input and tokenizes it. The code is no longer a meaningless stream of bytes, but a  list of tokens.Tokens are also associated with defined type required for further analysis.&lt;/p&gt;
+
+&lt;h3 id=&quot;parser&quot;&gt;Parser&lt;/h3&gt;
+
+&lt;p&gt;The tokens are passed to parser which is responsible for organizaing tokens into hierarchical structure called &lt;strong&gt;Abstract Syntax Tree&lt;/strong&gt;. The tree determines the order in which code should be executed.&lt;/p&gt;
+
+&lt;h3 id=&quot;compiler&quot;&gt;Compiler&lt;/h3&gt;
+
+&lt;p&gt;Compiler traverses the tree and maps it into valid bytecode instructions.&lt;/p&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;div class=&quot;mermaid&quot; style=&quot;&quot;&gt;
+graph LR
+        A[&quot;
+        Input Code&lt;br&gt;&lt;br&gt;
+        int x=a*5+2;
+        &quot;]
+        B[&quot;
+          Tokens&lt;br&gt;&lt;br&gt;{type,int},
+          &lt;br&gt;{identifier,x}
+          &lt;br&gt;{operator,=}
+          &lt;br&gt;{identifier,a}
+          &lt;br&gt;{operator,*}
+          &lt;br&gt;{number,5}
+          &lt;br&gt;{operator,+}
+          &lt;br&gt;{number,2}
+          &lt;br&gt;{keyword,;}
+          &quot;]
+          A--&gt;|LEXER|B
+          B--&gt;|PARSER|EQUALS
+        subgraph Abstract Syntax Tree
+        EQUALS[&quot;=&quot;]
+        VARX[&quot;x&quot;]
+        VARA[&quot;a&quot;]
+        MULTIPLY[&quot;*&quot;]
+        PLUS[&quot;+&quot;]
+        FIVE[5]
+        TWO[2]
+        EQUALS---PLUS
+        EQUALS---VARX
+        PLUS---TWO
+        PLUS---MULTIPLY
+        MULTIPLY---FIVE
+        MULTIPLY---VARA
+        end
+&lt;/div&gt;
+</description>
+				<pubDate>Fri, 11 Mar 2016 00:00:00 +0100</pubDate>
+				<link>/enkel/2016/03/11/enkel_2_technology.html</link>
+				<guid isPermaLink="true">/enkel/2016/03/11/enkel_2_technology.html</guid>
+			</item>
+		
+			<item>
+				<title>Creating JVM language [PART 1] - Enkel</title>
+				<description>&lt;p&gt;As I mentioned in previous post I am participating in &lt;a href=&quot;http://www.maciejaniserowicz.com/daj-sie-poznac&quot;&gt;&amp;quot;Daj się poznać&amp;quot; contest&lt;/a&gt;. The goal of the contest is to implement any project and document it&amp;#39;s development process by blogging.&lt;br&gt;
+I came up with an idea of creating my own simple JVM language and compiler (because why the hell not)?&lt;br&gt;
+The language is called &lt;strong&gt;Enkel&lt;/strong&gt;, which means &amp;quot;simple&amp;quot; in swedish.&lt;br&gt;
+The reasons why I decided to go with language running on JVM are:   &lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;JVM specification is very well documented.&lt;/li&gt;
-  &lt;li&gt;JVM languages can be mixed with each other - Enkel will be able to use Java libraries.&lt;/li&gt;
-  &lt;li&gt;I know Java fairly well (lexer,parser and compiler will be written in this language).&lt;/li&gt;
-  &lt;li&gt;There are some good Java libraries for manipulating bytecode.&lt;/li&gt;
-  &lt;li&gt;There are many things to “improve” in Java language.&lt;/li&gt;
+&lt;li&gt;JVM specification is very well documented.&lt;/li&gt;
+&lt;li&gt;JVM languages can be mixed with each other - Enkel will be able to use Java libraries.&lt;/li&gt;
+&lt;li&gt;I know Java fairly well (lexer,parser and compiler will be written in this language).&lt;/li&gt;
+&lt;li&gt;There are some good Java libraries for manipulating bytecode.&lt;/li&gt;
+&lt;li&gt;There are many things to &amp;quot;improve&amp;quot; in Java language.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;Over the next 10 weeks I will be describing the implementation process, so stay tuned.&lt;/p&gt;
@@ -30,12 +113,12 @@ The reasons why I decided to go with language running on JVM are:&lt;/p&gt;
 		
 			<item>
 				<title>Why blog?</title>
-				<description>&lt;p&gt;I’ve never thought about running my own blog until I came across &lt;a href=&quot;http://www.maciejaniserowicz.com/daj-sie-poznac&quot;&gt;&lt;strong&gt;“Daj się poznać” contest&lt;/strong&gt;&lt;/a&gt;. The main point of the
+				<description>&lt;p&gt;I&amp;#39;ve never thought about running my own blog until I came across &lt;a href=&quot;http://www.maciejaniserowicz.com/daj-sie-poznac&quot;&gt;&lt;strong&gt;&amp;quot;Daj się poznać&amp;quot; contest&lt;/strong&gt;&lt;/a&gt;. The main point of the
 event is to make programmers realize that blogging can be enjoyable and very beneficial activity.&lt;/p&gt;
 
-&lt;p&gt;For me it is a great way to archive projects’ development process. Sure you can store your code in repository and dig into it some time in the future. It is however certain that you will forget some (most?) of the concepts that were in your head during development. Blogging is a great way to preserve that concepts. There is also a slight chance that other people might read your stuff and learn something. How many times have you struggled on some complex problem until you found that one awesome post on someone’s blog? I’ve been there many times.&lt;/p&gt;
+&lt;p&gt;For me it is a great way to archive projects&amp;#39; development process. Sure you can store your code in repository and dig into it some time in the future. It is however certain that you will forget some (most?) of the concepts that were in your head during development. Blogging is a great way to preserve that concepts. There is also a slight chance that other people might read your stuff and learn something. How many times have you struggled on some complex problem until you found that one awesome post on someone&amp;#39;s blog? I&amp;#39;ve been there many times.&lt;/p&gt;
 
-&lt;p&gt;There just so many benefits of blogging, so why should one not do it?&lt;/p&gt;
+&lt;p&gt;There are just so many benefits of blogging, so why should one not do it?&lt;/p&gt;
 </description>
 				<pubDate>Wed, 09 Mar 2016 00:00:00 +0100</pubDate>
 				<link>/non-tech/2016/03/09/why_blog.html</link>

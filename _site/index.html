@@ -19,6 +19,7 @@
 	<link href="/assets/resources/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 	<link href="/assets/resources/syntax/syntax.css" rel="stylesheet">
 	<link href="/assets/css/style.css" rel="stylesheet">
+	<link href="/assets/css/mermaid.css" rel="stylesheet">
 
 	<!-- Le fav and touch icons -->
 	<!-- Update these with your own images
@@ -27,7 +28,7 @@
 	<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
 	<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
 	-->
-
+<script type="text/javascript" src="/assets/js/mermaid.min.js"></script>
 	<link rel="alternate" type="application/rss+xml" title="" href="/feed.xml">
 </head>
 
@@ -165,28 +166,126 @@
   <span class="post-date">
     
     March
+    11th,
+    
+    2016
+  </span>
+
+  <h2>
+    <a href="/enkel/2016/03/11/enkel_2_technology.html">Creating JVM language [PART 2] - Minimum theory</a>
+  </h2>
+
+  <div>
+    
+    <p>At the very highest level of abstraction we&#39;ll need to implement three modules.</p>
+
+<table><thead>
+<tr>
+<th>Module</th>
+<th>Takes</th>
+<th>Returns</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Lexer</td>
+<td>Text (Code)</td>
+<td>Tokens</td>
+</tr>
+<tr>
+<td>Parser</td>
+<td>Tokens</td>
+<td>AST (Abstract Syntax Tree)</td>
+</tr>
+<tr>
+<td>Compiler</td>
+<td>AST</td>
+<td>JVM Bytecode</td>
+</tr>
+</tbody></table>
+
+<h3 id="lexer">Lexer</h3>
+
+<p>Lexer takes simple text input and tokenizes it. The code is no longer a meaningless stream of bytes, but a  list of tokens.Tokens are also associated with defined type required for further analysis.</p>
+
+<h3 id="parser">Parser</h3>
+
+<p>The tokens are passed to parser which is responsible for organizaing tokens into hierarchical structure called <strong>Abstract Syntax Tree</strong>. The tree determines the order in which code should be executed.</p>
+
+<h3 id="compiler">Compiler</h3>
+
+<p>Compiler traverses the tree and maps it into valid bytecode instructions.</p>
+
+<p><br></p>
+
+<div class="mermaid" style="">
+graph LR
+        A["
+        Input Code<br><br>
+        int x=a*5+2;
+        "]
+        B["
+          Tokens<br><br>{type,int},
+          <br>{identifier,x}
+          <br>{operator,=}
+          <br>{identifier,a}
+          <br>{operator,*}
+          <br>{number,5}
+          <br>{operator,+}
+          <br>{number,2}
+          <br>{keyword,;}
+          "]
+          A-->|LEXER|B
+          B-->|PARSER|EQUALS
+        subgraph Abstract Syntax Tree
+        EQUALS["="]
+        VARX["x"]
+        VARA["a"]
+        MULTIPLY["*"]
+        PLUS["+"]
+        FIVE[5]
+        TWO[2]
+        EQUALS---PLUS
+        EQUALS---VARX
+        PLUS---TWO
+        PLUS---MULTIPLY
+        MULTIPLY---FIVE
+        MULTIPLY---VARA
+        end
+</div>
+
+    
+  </div>
+
+</article>
+
+
+<article class="home">
+
+  <span class="post-date">
+    
+    March
     10th,
     
     2016
   </span>
 
   <h2>
-    <a href="/enkel/2016/03/10/enkel_first.html">Writing your own JVM language [PART 1] - Enkel</a>
+    <a href="/enkel/2016/03/10/enkel_first.html">Creating JVM language [PART 1] - Enkel</a>
   </h2>
 
   <div>
     
-    <p>As I mentioned in previous post I am participating in <a href="http://www.maciejaniserowicz.com/daj-sie-poznac">“Daj się poznać” contest</a>. The goal of the contest is to implement any project and document it’s development process by blogging.   <br />
-I came up with an idea of creating my own simple JVM language and compiler (because why the hell not)?   <br />
-The language is called <strong>Enkel</strong>, which means “simple” in swedish. <br />
-The reasons why I decided to go with language running on JVM are:</p>
+    <p>As I mentioned in previous post I am participating in <a href="http://www.maciejaniserowicz.com/daj-sie-poznac">&quot;Daj się poznać&quot; contest</a>. The goal of the contest is to implement any project and document it&#39;s development process by blogging.<br>
+I came up with an idea of creating my own simple JVM language and compiler (because why the hell not)?<br>
+The language is called <strong>Enkel</strong>, which means &quot;simple&quot; in swedish.<br>
+The reasons why I decided to go with language running on JVM are:   </p>
 
 <ul>
-  <li>JVM specification is very well documented.</li>
-  <li>JVM languages can be mixed with each other - Enkel will be able to use Java libraries.</li>
-  <li>I know Java fairly well (lexer,parser and compiler will be written in this language).</li>
-  <li>There are some good Java libraries for manipulating bytecode.</li>
-  <li>There are many things to “improve” in Java language.</li>
+<li>JVM specification is very well documented.</li>
+<li>JVM languages can be mixed with each other - Enkel will be able to use Java libraries.</li>
+<li>I know Java fairly well (lexer,parser and compiler will be written in this language).</li>
+<li>There are some good Java libraries for manipulating bytecode.</li>
+<li>There are many things to &quot;improve&quot; in Java language.</li>
 </ul>
 
 <p>Over the next 10 weeks I will be describing the implementation process, so stay tuned.</p>
@@ -213,12 +312,12 @@ The reasons why I decided to go with language running on JVM are:</p>
 
   <div>
     
-    <p>I’ve never thought about running my own blog until I came across <a href="http://www.maciejaniserowicz.com/daj-sie-poznac"><strong>“Daj się poznać” contest</strong></a>. The main point of the
+    <p>I&#39;ve never thought about running my own blog until I came across <a href="http://www.maciejaniserowicz.com/daj-sie-poznac"><strong>&quot;Daj się poznać&quot; contest</strong></a>. The main point of the
 event is to make programmers realize that blogging can be enjoyable and very beneficial activity.</p>
 
-<p>For me it is a great way to archive projects’ development process. Sure you can store your code in repository and dig into it some time in the future. It is however certain that you will forget some (most?) of the concepts that were in your head during development. Blogging is a great way to preserve that concepts. There is also a slight chance that other people might read your stuff and learn something. How many times have you struggled on some complex problem until you found that one awesome post on someone’s blog? I’ve been there many times.</p>
+<p>For me it is a great way to archive projects&#39; development process. Sure you can store your code in repository and dig into it some time in the future. It is however certain that you will forget some (most?) of the concepts that were in your head during development. Blogging is a great way to preserve that concepts. There is also a slight chance that other people might read your stuff and learn something. How many times have you struggled on some complex problem until you found that one awesome post on someone&#39;s blog? I&#39;ve been there many times.</p>
 
-<p>There just so many benefits of blogging, so why should one not do it?</p>
+<p>There are just so many benefits of blogging, so why should one not do it?</p>
 
     
   </div>
@@ -257,10 +356,10 @@ event is to make programmers realize that blogging can be enjoyable and very ben
 			</p>
 		</footer>
 	</div>
-
 	<script type="text/javascript" src="/assets/resources/jquery/jquery.min.js"></script>
 	<script type="text/javascript" src="/assets/resources/bootstrap/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="/assets/js/app.js"></script>
+
 </body>
 </html>
 

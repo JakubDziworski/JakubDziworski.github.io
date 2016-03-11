@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Writing your own JVM language [PART 1] - Enkel
+title: Creating JVM language [PART 1] - Enkel
 categories: [Enkel]
 description: First post.
 tags: [enkel,jvm,java]
