@@ -398,7 +398,7 @@ public class PrintVariable implements Instruction, Opcodes {
  * ```ALOAD``` - similar to ```ILOAD``` but A stands for reference (String object refherence)
  
 
-### Generate bytecode Saving bytecode to .class file
+### Generate bytecode 
 
 After calling cw.toByteArray(); the ASM creates a new instance of ```ByteVector```
 and puts all the instructions in it. The very first 4 bytes in EVERY .class files
@@ -429,7 +429,7 @@ ClassFile {
 In this post I mainly described method_info section since the Enkle does
 not have fields, attributes, superclasses or inerfaces.
 
-### Save bytecode to file
+### Write bytecode to file
 
 There is requirement specified in jvm specification - the .class file has
 to be named exactly the same as the class itself. The file passed to compiler
