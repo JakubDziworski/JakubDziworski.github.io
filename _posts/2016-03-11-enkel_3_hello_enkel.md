@@ -402,7 +402,7 @@ public class PrintVariable implements Instruction, Opcodes {
 
 After calling cw.toByteArray(); the ASM creates a new instance of ```ByteVector```
 and puts all the instructions in it. The very first 4 bytes in EVERY .class files
-are infamous [0xCAFEBABE](http://stackoverflow.com/questions/2808646/why-is-the-first-four-bytes-of-java-class-file-format-is-cafebabe).
+are [0xCAFEBABE](http://stackoverflow.com/questions/2808646/why-is-the-first-four-bytes-of-java-class-file-format-is-cafebabe).
 Following values are described below:
 
 ```java
