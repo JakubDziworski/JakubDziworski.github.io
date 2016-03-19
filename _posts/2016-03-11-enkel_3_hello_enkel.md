@@ -13,8 +13,8 @@ After each iteration I will add some new feature to the project describing it in
  
 ## Sources
 
-The project can be cloned from [github repository](https://github.com/JakubDziworski/Enkel-JVM-language).
-The revision described in this post is [50e6996a4faf8d5b469d291a029be05f9e6c9520](https://github.com/JakubDziworski/Enkel-JVM-language/tree/50e6996a4faf8d5b469d291a029be05f9e6c9520).
+The project can be cloned from **[github repository](https://github.com/JakubDziworski/Enkel-JVM-language)**.  
+The revision described in this post is **[50e6996a4faf8d5b469d291a029be05f9e6c9520](https://github.com/JakubDziworski/Enkel-JVM-language/tree/50e6996a4faf8d5b469d291a029be05f9e6c9520)**.
 
 ## Features
 In this post I will add following features to the Enkel language: 
