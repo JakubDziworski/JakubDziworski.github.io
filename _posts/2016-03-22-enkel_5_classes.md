@@ -9,7 +9,7 @@ comments: true
 ## Sources
 
 The project can be cloned from **[github repository](https://github.com/JakubDziworski/Enkel-JVM-language)**.  
-The revision described in this post is **[50e6996a4faf8d5b469d291a029be05f9e6c9520](https://github.com/JakubDziworski/Enkel-JVM-language/tree/50e6996a4faf8d5b469d291a029be05f9e6c9520)**.
+The revision described in this post is **[50e6996a4faf8d5b469d291a029be05f9e6c9520](https://github.com/JakubDziworski/Enkel-JVM-language/tree/0f900ef537e23a15de2a100fb1e3942b7d079b36)**.
 
 ## Parser rules changes
 
