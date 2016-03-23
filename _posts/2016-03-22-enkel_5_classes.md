@@ -42,7 +42,7 @@ This is how the parse tree looks after modifications:
 
 ## Compiler changes
 
-Most of the changes involve moving top-level code from ```ByteCodeGenerator``` class to ```CompilationUnit``` ```ClassDeclaration```.
+Most of the changes involve moving top-level code from ```ByteCodeGenerator``` class to ```CompilationUnit``` and ```ClassDeclaration```.
 The logic is as follows:
 
  1. Compiler grabs parse tree values from ```SyntaxParseTreeTraverser```: 
