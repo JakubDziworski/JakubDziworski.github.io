@@ -9,13 +9,13 @@ comments: true
 ## Sources
 
 The project source code can be cloned from https://github.com/JakubDziworski/AntlrListenerVisitorComparison.
-There are full example of Listener and Visitor oriented parser implementations.
+There are full examples of Listener and Visitor oriented parser implementations.
 
 ## SomeLanguage
 
 Let's say we want to parse "SomeLanguage" with following grammar.
 
-```java
+```java 
 grammar SomeLanguage ;
 
 classDeclaration : 'class' className '{' (method)* '}';
@@ -29,6 +29,7 @@ WS: [ \t\n\r]+ -> skip ;
 ```
 
 Sample valid "SomeLanguage" code:
+
 ```java 
 class SomeClass {
     fun1 {
@@ -218,7 +219,7 @@ public class VisitorOrientedParser implements Parser {
 
 Both implementations output the same result. I personally prefer
 Visitor since it requires less code and there is no need to store values
-in fields.
+in the fields.
 
 Using any parser implementation "SomeLanguage" sample code is parsed to Class object: 
 
