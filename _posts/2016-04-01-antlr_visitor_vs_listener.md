@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Antlr4 - Listener vs Visitor implementation 
+title: Antlr 4 - Listener vs Visitor
 categories: [Java]
 tags: [enkel,jvm,antlr,antlr4,antlr,java,language]
 fullview: true
