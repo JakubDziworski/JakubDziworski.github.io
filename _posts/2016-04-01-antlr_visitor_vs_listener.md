@@ -44,7 +44,7 @@ class SomeClass {
 ```
 
 The class consist of zero or more methods.
-The methods consist of instructions.
+The methods consist of zero or more instructions.
 That's all.
 
 We'd like to parse the code to "Class" object:
