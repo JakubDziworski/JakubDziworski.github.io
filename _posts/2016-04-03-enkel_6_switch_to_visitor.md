@@ -9,7 +9,7 @@ comments: true
 ## Sources
 
 The project can be cloned from **[github repository](https://github.com/JakubDziworski/Enkel-JVM-language)**.  
-The revision described in this post is **[433179bfbf67e65b7d9dc19d74b244df546ad333](https://github.com/JakubDziworski/Enkel-JVM-language/tree/433179bfbf67e65b7d9dc19d74b244df546ad333)**.
+The revision described in this post is **[1fc8131b2752e73776e91084ffeabbfa45fc6307](https://github.com/JakubDziworski/Enkel-JVM-language/tree/1fc8131b2752e73776e91084ffeabbfa45fc6307)**.
 
 ## Visitor vs Listener
 
