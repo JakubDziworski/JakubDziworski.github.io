@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Creating JVM language [PART 9] - Return
+title: Creating JVM language [PART 9] - Returning values
 categories: [Enkel]
 tags: [enkel,jvm,asm,antlr,antlr4,antlr,java,language]
 fullview: true
