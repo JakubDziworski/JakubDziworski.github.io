@@ -64,7 +64,7 @@ SomeClass {
 
 The above code results in following parse tree:
 
-![Parse Tree](/assets/media/enkel_9/parse_tree.png)
+![Parse Tree](/assets/media/enkel_9/parse_tree.gif)
 
 You may notice that the parser did not resolve implicit return statement in fun2.
 This is due to the fact that the block is empty and matching "empty" as return statement is not a good idea.
