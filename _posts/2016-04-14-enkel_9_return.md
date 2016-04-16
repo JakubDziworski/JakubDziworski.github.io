@@ -68,11 +68,11 @@ The above code results in following parse tree:
 
 You may notice that the parser did not resolve implicit return statement in fun2.
 This is due to the fact that the block is empty and matching "empty" as return statement is not a good idea.
-This missing return statements are added at bytecode generation phase.
+The missing return statements are added at bytecode generation phase.
 
 ## Mapping antlr context objects
 
-Parsed return statements converted from antlr context classes into POJO ```ReturnStatement``` objects.
+Parsed return statements are converted from antlr context classes into POJO ```ReturnStatement``` objects.
 The purpose of this step is to feed compiler only with data required for bytecode generation. 
 Getting data from antlr generated objects to generate bytecode would result in ugly unreadable code.
 
