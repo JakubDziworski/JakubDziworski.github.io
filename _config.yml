@@ -15,17 +15,17 @@ defaults:
     scope:
       path: "" # empty string for all files
     values:
-      title: Kuba Dziworski
+      title: Jakub Dziworski
 
 description: Stylish Jekyll Theme
 author:
-  name: Kuba Dziworski
+  name: Jakub Dziworski
   email: jakub.dziworski@gmail.com
   github: jakubdziworski
   twitter: Jakub_Dziworski
   pinterest: kubadziworski
   linkedin: jakub-dziworski-795079105
-  bio: Software Dev Blog
+  bio: Java Dev Blog
   email_md5: a90846857e328572041910f988965bbf
 
 rss_path: feed.xml
