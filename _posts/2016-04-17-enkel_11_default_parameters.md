@@ -48,8 +48,7 @@ functionParamdefaultValue : '=' expression ;
 The function parameter consists of type, followed by name. Optionally ( '?' ) it is followed
 by equals sign ('=') followed by some by default expression.
 
-## Generating bytecode
-
+## Mapping antlr context objects
 Changes in this section are minor. New field (```defaulValue```) was introduced into ```FunctionParameter``` class.  
 The field stores  ```Optional<Expression>``` object. If the parser founds defaultValue then the Optional consits of this value. 
 Otherwise the Optional is empty.
@@ -79,7 +78,9 @@ public class FunctionSignatureVisitor extends EnkelBaseVisitor<FunctionSignature
 }
 ```
 
-Function Call bytecode generation visitor class has to additionaly do following steps:
+## Generating bytecode
+
+Generating bytecode for function call has to additionally following steps:
 
 * Check if there are not more arguments (method call) than parameters (method signature) 
 * Get and evaluate default expressions for the arguments that are missing
