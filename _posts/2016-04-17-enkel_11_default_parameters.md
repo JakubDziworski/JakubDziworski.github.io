@@ -3,7 +3,7 @@ layout: post
 title: Creating JVM language [PART 11] - Default parameters
 categories: [Enkel]
 tags: [enkel,jvm,asm,antlr,antlr4,antlr,java,language]
-fullview: false
+fullview: true
 comments: true
 ---
 ## Sources
