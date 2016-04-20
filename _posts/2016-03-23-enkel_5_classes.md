@@ -36,7 +36,7 @@ classBody :  ( variable | print )* ;
  * class declaration consist of className followed by body inside curly brackets
  * the body is the same thing as it used to be in prototype - variable declaration or prints
  
-This is how the parse tree looks after modifications: 
+This is how the parse tree looks after modifications (You can live preview parse tree using intellij plugin - https://www.youtube.com/watch?v=h60VapD1rOo): 
 
 ![Parse Tree](/assets/media/enkel_5/class_parse_tree.gif)
 
