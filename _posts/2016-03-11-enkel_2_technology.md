@@ -36,7 +36,7 @@ graph LR
           <br>{identifier,x}
           <br>{operator,=}
           <br>{identifier,a}
-          <br>{operator,*}
+          <br>{operator,#42;}
           <br>{number,5}
           <br>{operator,+}
           <br>{number,2}
@@ -48,7 +48,7 @@ graph LR
         EQUALS["="]
         VARX["x"]
         VARA["a"]
-        MULTIPLY["*"]
+        MULTIPLY["#42;"]
         PLUS["+"]
         FIVE[5]
         TWO[2]
