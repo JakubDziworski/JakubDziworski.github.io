@@ -98,28 +98,6 @@ public class ExpressionVisitor extends EnkelBaseVisitor<Expression> {
 CompareSign is an object representing comparing sign ('==", '<' etc.).
 It also stores appropriate bytecode instruction name for comparison (```IF_ICMPEQ```,```IF_ICMPLE``` etc.)
 
-## Detecting implicit void return
-
-If there is a implicit return from a void method, no return statement is detected during parse time.
-That is why it is necessary to detect this scenario and append return statement at generation time.
-
-```java
-public class MethodGenerator {
-    //other stuff
-    private void appendReturnIfNotExists(Function function, Block block,StatementGenerator statementScopeGenrator) {
-        Statement lastStatement = block.getStatements().get(block.getStatements().size() - 1);
-        boolean isLastStatementReturn = lastStatement instanceof ReturnStatement;
-        if(!isLastStatementReturn) {
-            EmptyExpression emptyExpression = new EmptyExpression(function.getReturnType());
-            ReturnStatement returnStatement = new ReturnStatement(emptyExpression);
-            returnStatement.accept(statementScopeGenrator);
-        }
-    }
-}
-```
-This method detects if the last statement in the method is a ReturnStatement.
-If not it generates return instruction.
-
 ## Generating bytecode
 
 The jvm has few groups of conditional instructions for conditional branching:
