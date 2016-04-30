@@ -36,7 +36,7 @@ It would however result in awful ifology - we don't want that.
 Instead I decided to make an ```TypeSpecificOpcodes``` enum that stores all the opcodes for each type respectively and is reachable by ```Type``` enum:
 
 ```java
-public enum TypeSpecificOpcodes {
+public enum TypeSpecificOpcodes { 
 
     INT (ILOAD, ISTORE, IRETURN,IADD,ISUB,IMUL,IDIV), //values (-127,127) - one byte.
     LONG (LLOAD, LSTORE, LRETURN,LADD,LSUB,LMUL,LDIV),
