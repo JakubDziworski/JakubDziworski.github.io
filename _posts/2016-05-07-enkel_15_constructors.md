@@ -219,6 +219,7 @@ in the frame (at position 0). So if the ```add``` method was called in a non-sta
 it would have 3 local variables (this,x,y) out of the box.
 
 The Cat constructor without any body specified by programmer would therefore look like:
+
 ```java
 0: aload_0      //load "this"
 1: invokespecial #8                  // Method java/lang/Object."<init>":()V - call super on "this" (the Cat dervies from Object)
