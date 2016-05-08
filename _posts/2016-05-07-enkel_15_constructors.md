@@ -224,6 +224,6 @@ The Cat constructor without any body specified by programmer would therefore loo
 0: aload_0      //load "this"
 1: invokespecial #8                  // Method java/lang/Object."<init>":()V - call super on "this" (the Cat dervies from Object)
 12: return
-```java
+```
  
 
