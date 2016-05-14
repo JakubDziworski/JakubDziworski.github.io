@@ -45,11 +45,11 @@ I also added assign statement for already defined variables:
 assignment : name EQUALS expression;
 ```
 
-### Why I have not implemented assign statement so far?
+### Why I have not implemented assign statement for so long?
 
 To make use of fields you have to assign them to something. Turns out
 I have not yet implemented such a basic thing as assignment statement for already declared variables.
-Why didn't I do that? Well It was kind of on purpose.
+Why haven't I done that? Well It was kind of on purpose.
 
 The reason behind it is I would like the variables to be constant (immutable).
 Assigning means changing state - changing state lead to many issues (synchronization,side effects,memory leaks).
@@ -72,8 +72,8 @@ your argument.**
 
 If you have no side effects in your methods you can easily make them parallel
 without worrying about synchronization issues and other nasty stuff. Such methods does
-not have a state = therea are no side effects! The easiest way to achieve 
-no side effects is to use values (constant variables) only.
+not have a state = there are no side effects! The easiest way to achieve 
+lack of side effects is to use values (constant variables) only.
 
 You can learn more about statements and what's wrong with them
 in **[awesome talk by Uncle Bob (the talk about assignments starts at 11:15): 
@@ -156,12 +156,12 @@ public class AssignmentStatementGenerator {
     }
 ```
 
-The local variables have priorority over fields if there is ambiguity. If you declared 
+The local variables have priority over fields if there is ambiguity. If you declared 
 local variable named exactly like a field you wouldn't want to 
-reference field but a variable, right? That is why the local variables are first searched.
+reference field but a variable, right? That is why the local variables are searched first.
 
-The ```PUTFIELD``` opcode is similar to ```GETFIELD``` but pops additional item of the stack - 
-the result of expression to be saved into field.
+The ```PUTFIELD``` opcode is similar to ```GETFIELD``` but pops additional item off the stack - 
+the result of expression to be assigned into field.
 
 ## Example
 
