@@ -46,7 +46,7 @@ they are like a cherry on top, proving that the features are implemented correct
 In my opinion the most important responsibility of the test is to be as most readable as possible.
 Business changes to the project are introduced all the time. If we change something in the 
 application we have to change test too (unless you're applying open-closed principle, which I've never heard
-of anyone successfully adapting it :D). If tests are hard to read there's a big problem.
+of anyone successfully adapting :D). If tests are hard to read there's a big problem.
 
 On the other hand - it's just my opinion, who am I to judge? Do you feel similar about this topic
 or is it just me? If you disagree, or have some objections leave a comment!
