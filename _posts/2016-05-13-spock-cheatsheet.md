@@ -51,7 +51,7 @@ of anyone successfully adapting it :D). If tests are hard to read there's a big 
 On the other hand - it's just my opinion, who am I to judge? Do you feel similar about this topic
 or is it just me? If you disagree, or have some objections leave a comment!
 
-## Spock 
+# Spock 
 
 Spock is both testing and mocking framework. What's more it extends
 Junit runner so it can be runned by the tools you
