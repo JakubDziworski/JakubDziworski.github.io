@@ -196,7 +196,7 @@ Math.max(a, b) == c
 
 #### Without unroll
 
-We do not know which row failed
+We have to figure out which row failed manually
 
 ```groovy
 maximum of two numbers   FAILED
@@ -211,7 +211,7 @@ Math.max(a, b) == c
 
 ### Data Pipes
 
-Left side must be Collection, String or Iterable.
+Right side must be Collection, String or Iterable.
 
 ```groovy
 where:
@@ -389,7 +389,7 @@ subscriber.receive(_) >>> ["ok", "fail", "ok"] >> { throw new InternalError() } 
 @Timeout(value = 100, unit = TimeUnit.MILLISECONDS)
 @Title("This tests if..."
 @Narrative("some detailed explanation")
-@Issue("http://redmine/gdfgfdg)
+@Issue("http://redmine/23432")
 @Subject
 ```
 
