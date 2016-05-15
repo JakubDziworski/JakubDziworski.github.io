@@ -48,7 +48,7 @@ Business changes to the project are introduced all the time. If we change someth
 application we have to change test too (unless you're applying open-closed principle, which I've never heard
 of anyone successfully adapting :D). If tests are hard to read there is a big problem.
 
-On the other hand - it's just my opinion, who am I to judge? Do you feel similar about this topic
+On the other hand - these are just my opinion, who am I to judge? Do you feel similar about this topic
 or is it just me? If you disagree, or have some objections leave a comment!
 
 # Spock 
