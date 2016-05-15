@@ -26,7 +26,7 @@ write and read tests in medium and large sizes projects:
    Collections.singletonList()'s,replay's,verify's or any(MyAwesomeAbstractFactoryBaseClass.class)'s and many more.
  * There is no good way to separate sections responsible for different phases (given,when,then). 
    Some people use comments to mark those sections but I think it's even worse than not having them at all.
- * Java is certainly not the great language for building "expected" objects - everything is so verbose.
+ * Java is certainly not easy language for building "expected" objects - everything is so verbose.
    Once again - it hides the intent of a test.
  * Parametrizied tests are kinda weird too. They must be stored in fields,
    and you can only have one set of them per test class.
@@ -36,8 +36,8 @@ write and read tests in medium and large sizes projects:
 
 If tests are hard to write we usually think of them
 as something painful and start to neglect them.
-If we avoid or delay writing tests the application will eventually start
-to become unreliable, where we are afraid to make any changes because other part of the app might 
+Avoiding or delaying writing tests leads to the situation where application cannot be trusted anymore. 
+We then become afraid of making any changes because other part of the app might 
 break in some bizarre way.
 
 It shouldn't be this way. Test should be easy and fun to write. After all
@@ -46,7 +46,7 @@ they are like a cherry on top, proving that the features are implemented correct
 In my opinion the most important responsibility of the test is to be as most readable as possible.
 Business changes to the project are introduced all the time. If we change something in the 
 application we have to change test too (unless you're applying open-closed principle, which I've never heard
-of anyone successfully adapting :D). If tests are hard to read there's a big problem.
+of anyone successfully adapting :D). If tests are hard to read there is a big problem.
 
 On the other hand - it's just my opinion, who am I to judge? Do you feel similar about this topic
 or is it just me? If you disagree, or have some objections leave a comment!
@@ -58,13 +58,13 @@ Junit runner so it can be runned by the tools you
 used for your tests before.
 
 The best thing about Spock is that **it's basically a DSL (domain specifing language) for writing tests**.
-It's based on Groovy and is designed particularly for writing tests. It introduces some syntax 
-features just for the purpose of tests. You may therefore expect some neat stuff in it (which is indeed correct).
+It's based on Groovy and is designed particularly testing. It introduces some syntax 
+features just for that purpose. You may therefore expect some neat stuff in it (which is indeed correct).
 
 Groovy is kinda like a scripting version of Java - simple, less verbose but retains all the power of JVM.
 
 
-Benefits of using spock over Junit + mocking framework:
+Benefits from using spock over Junit + mocking framework:
 
 * Groovy - less verbose than Java
 * Additional syntax features designed for testing
@@ -80,8 +80,8 @@ Benefits of using spock over Junit + mocking framework:
 
 This cheatsheet contains the most useful spock features regarding testing Java applications.
 Most of this is copy-paste from official spock documentation. I compiled it 
-while I was learning this framework to have all the information in one place. Once I've done
-it I figure out why not share it on a blog too.
+while I was learning the framework to have all information in one place. 
+I figure out since it's already compiled why not share it on a blog too.
 
 
 # Basics
