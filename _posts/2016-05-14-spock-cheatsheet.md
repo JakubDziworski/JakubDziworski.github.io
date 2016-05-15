@@ -155,9 +155,9 @@ class Math extends Specification {
 
         where:
         a | b | c
-        1 | 3 | 3
-        7 | 4 | 7
-        0 | 0 | 0
+        1 | 3 | 3   //passes
+        7 | 4 | 4   //fails
+        0 | 0 | 0   //passes
     }
 }
 ```
