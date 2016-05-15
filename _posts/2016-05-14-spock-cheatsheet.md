@@ -113,7 +113,7 @@ def cleanupSpec() {}   // run after the last feature method
     when: //invoke your test subject here and assign it to a variable
     then: //assert data here
     cleanup: //optional
-    where: //optional:provide parametrized data (tables or socket) 
+    where: //optional:provide parametrized data (tables or pipes) 
       
 ```
 or 
