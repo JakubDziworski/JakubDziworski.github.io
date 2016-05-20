@@ -10,7 +10,7 @@ comments: true
 <br>
 <br>
 
-![](/assets/media/enkel_19/equals.png)
+![](/assets/media/enkel_19/equals.gif)
 
 <br>
 <br>
