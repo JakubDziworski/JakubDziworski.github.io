@@ -133,9 +133,8 @@ public class ConditionalExpressionGenerator {
 
 There are few sections worth explanation: 
 
-**#1**
-
-Equals method is declared in Object class as follows:
+**#1**  
+Equals method is declared in Object class as follows:   
 
 ```java
 public boolean equals(Object obj) {
@@ -147,25 +146,21 @@ Therefore the parameter needs to be an ```java.lang.Object```.
 The name is irrelavant (```o``` seems fine).
 There is no default value (```Optional.empty```)
 
-**#2**
-
+**#2**  
 It's mandatory to distinguish whether the equality (```==``` or ```!=```),
 or comparing (```>``` ```<``` ```>=``` or ```<=```) operators were used .
 We could use ```compareTo``` for equality operator too but not all Classes 
 implement ```Comparable``` interface.
 
-**#3** 
-
+**#3**   
 As pointed out before equals method is named "equals" has one parameter
 of type ```java.lang.Object``` and returns primitive ```boolean``` value. 
 
-**#4**
-
+**#4**  
 Generate bytecode responsible for calling equals method. Take a look in
 ```CallExpressionGenerator``` class for more details on that.
 
-**#5**
-
+**#5**  
 The equals returns true (1) if the objects
 are equal or false (0) if the objects are different.
 The primitives equality is calculated the other way around. The 
@@ -176,8 +171,7 @@ To do that I used XOR (Exclusive or) logical instruction.
 The compareTo method on the other hand is very similar to primitive
 comparison. It return 0 if equal too, so there is no need to make any changes.
 
-**#6**
-
+**#6**  
 Creating call which represents ```compareTo``` call. ```compareTo```
 was introduced before generics so it also takes ```java.lang.Object``` as a parameter,
 but returns int.

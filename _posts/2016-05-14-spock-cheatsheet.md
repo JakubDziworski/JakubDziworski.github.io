@@ -18,8 +18,8 @@ The standard way of testing Java application is to use Junit
 and some mocking framework (Mockito,EasyMock, PowerMock etc.).
 
 Java combined with those frameworks makes it rather hard to 
-write and read tests in medium and large sizes projects:
- 
+write and read tests in medium and large sizes projects:   
+
  * You cannot set title for a test (Junit5 introduces this feature but it is still in alpha). Instead you have
  to name your method in a ridiculous way like 'shouldAddToCartIfItemIsAvailaibleAndTheLimitIsNotExceededAnd.....'.
  * The intent of the test is blurred by all those Java and mocking framework verbosity like
