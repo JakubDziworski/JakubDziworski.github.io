@@ -15,13 +15,15 @@ comments: true
 <br>
 
 I started this blog by entering the - [**"Daj się poznać (Get to know yourself)" contest**](http://www.maciejaniserowicz.com/daj-sie-poznac). The point was to create
-series of 20 blog posts about any programming project. It was a great opportunity create Enkel.
+series of 20 blog posts about any programming project. It was a great opportunity to create Enkel.
 
-Now the contest is almost over and I've made it to top 16 finalist.
+Now the contest is almost over and I've made it to the top 16 finalist.
 
-The final decision is up to you! Everyone can [--> VOTE HERE <--](http://ankieta.dajsiepoznac.pl).
+The final decision is up to you!
+ 
+ [--> VOTE HERE <--](http://ankieta.dajsiepoznac.pl).
 
-You have to give your email (the verifictaion is required) and choose at least two blogs.
+All you have to do is provide an email (the verifictaion is required) and choose at least two blogs.
 
 If you liked what I've done here I'd be happy to get a vote from you ;). 
 
