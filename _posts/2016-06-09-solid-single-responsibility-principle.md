@@ -11,3 +11,6 @@ comments: true
 
 The screencast contains explanation of single responsible principle.  
 It also gives an practical example of a class violating this principle and how to fix it.
+
+Btw - I am currently participating in a blogging contest.   
+**If you liked this post please [--> help me out by voting for it<--](http://ankieta.dajsiepoznac.pl).**
