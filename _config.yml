@@ -16,7 +16,7 @@ defaults:
       path: "" # empty string for all files
     values:
       title: Jakub Dziworski
-
+title: Jakub Dziworski
 description: Jakub Dziworski's dev blog
 author:
   name: Jakub Dziworski
