@@ -2,7 +2,7 @@
 layout: post
 title: JShell - Java 9 interpreter (REPL) - Getting Started and Examples
 categories: java
-tags: [jshell,java 9,9,java,api,repl,interpreter]
+tags: [jshell,java 9,9,java,api,repl,interpreter,getting,started,examples]
 fullview: true
 comments: true
 ---
