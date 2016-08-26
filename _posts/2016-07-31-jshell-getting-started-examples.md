@@ -230,6 +230,6 @@ I got 1 apple
 # Conclusion
 
 JShell is a very useful tool for prototyping and testing Java code snippets. Even though it is not yet officially released I highly recommend checking it out.
-There is also a JShell Java api which allows you to evaluate JShell from java (post about it soon).
+There is also a JShell Java api which allows you to evaluate JShell from java.
 Once the java 9 is out I bet there will be JShell integrations in most popualar IDEs - this will make
 using it even more handy.

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Solid in practice [3/5] - Liskov Substitution Principle
+title: Solid in practice - Liskov Substitution Principle
 categories: [Solid in practice]
 tags: [solid,liskov,substitution,principle,java]
 fullview: true

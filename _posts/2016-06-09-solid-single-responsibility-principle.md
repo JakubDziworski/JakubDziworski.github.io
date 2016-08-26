@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Solid in practice [1/5] - Single Responsibility Principle
+title: Solid in practice - Single Responsibility Principle
 categories: [Solid in practice]
 tags: [solid,srp,single responsibility priniciple]
 fullview: true

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Solid in practice [2/5] - Open Closed Principle
+title: Solid in practice - Open Closed Principle
 categories: [Solid in practice]
 tags: [solid,op,open,closed,principle]
 fullview: true
