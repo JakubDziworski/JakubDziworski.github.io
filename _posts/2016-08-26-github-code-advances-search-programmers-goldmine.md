@@ -92,5 +92,5 @@ ClusterActorRefProvider extension:conf
 
 Github search is underrated yet extremly powerful tool for learning new apis,solving issues and finding repos you might be interested in.
 This is a great way to quickly get started with new framework - finding code snippets that are similar to what you want to achieve has never been easier.
-It also makes you feel less alone with the issues you encounter - it's likely some has already solved it. Likewise, discovering interesting projects with this
-search engine is just a matter of minutes.
+It also makes you feel less alone with the issues you encounter - it's very likely some has already solved them. Likewise, discovering interesting projects with this
+search engine is just a matter of minutes. 
