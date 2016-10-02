@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Implementing Websockets Game Server with Scala and Akka Streams [Part 1/4]
-categories: [scala]
+title: Implementing Websocket Game Server with Scala and Akka Streams [Part 1/4]
+categories: [scala,game-server-akka-streams]
 tags: [scala,akka,http,streams,game,server,client,websockets]
 fullview: true
 comments: true
@@ -10,4 +10,6 @@ comments: true
 <iframe width="640" height="360" src="https://www.youtube.com/embed/lex7xQPgzY8" frameborder="0" allowfullscreen></iframe>
 
 First part of server side implementation
+
+Code: [https://github.com/JakubDziworski/Akka-Streams-Websocket-Game-Server](https://github.com/JakubDziworski/Akka-Streams-Websocket-Game-Server)
 
