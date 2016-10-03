@@ -18,7 +18,7 @@ In the previous 19 posts I've been describing the process of creating
 my very first programming language. All that hard work I've put into it 
 would seem pointless if I'd never used it for anything useful, right?
 
-I came up with an idea of credit cards drawing simulator.
+I came up with an idea of playing cards drawing simulator.
 The idea is to provide number of players and number of cards per player.
 As an output you get randomized collection of cards for each player. Just like
 in real games the cards are being removed from the stack when drawing.
