@@ -6,8 +6,7 @@ tags: [scala,akka,http,streams,game,server,client,websockets]
 fullview: true
 comments: true
 ---
-
-<iframe width="640" height="360" src="https://www.youtube.com/embed/PTWLO5Gclh0" frameborder="0" allowfullscreen></iframe>
+<iframe width="640" height="360" src="https://www.youtube.com/embed/gqHgnbDBTIw" frameborder="0" allowfullscreen></iframe>
 
 
 Last part of server side implementation.
