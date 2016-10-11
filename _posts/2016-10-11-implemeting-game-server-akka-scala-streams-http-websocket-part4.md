@@ -7,7 +7,7 @@ fullview: true
 comments: true
 ---
 
-<iframe width="640" height="360" src="https://www.youtube.com/embed/PTWLO5Gclh0" frameborder="0" allowfullscreen></iframe>
+<iframe width="840" height="425" src="https://www.youtube.com/embed/PTWLO5Gclh0" frameborder="0" allowfullscreen></iframe>
 
 
 This is the last part where I code a client.

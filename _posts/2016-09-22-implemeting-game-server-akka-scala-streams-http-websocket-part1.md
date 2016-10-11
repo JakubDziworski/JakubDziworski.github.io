@@ -7,7 +7,7 @@ fullview: true
 comments: true
 ---
 
-<iframe width="640" height="360" src="https://www.youtube.com/embed/lex7xQPgzY8" frameborder="0" allowfullscreen></iframe>
+<iframe width="840" height="425"  src="https://www.youtube.com/embed/lex7xQPgzY8" frameborder="0" allowfullscreen></iframe>
 
 First part of server side implementation
 
