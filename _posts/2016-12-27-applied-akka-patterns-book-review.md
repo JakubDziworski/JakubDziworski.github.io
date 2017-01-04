@@ -10,9 +10,9 @@ comments: true
 
 I recently watched [Wade Waldron's talk "Domain Driven Design and Onion Architecture in Scala"](https://youtu.be/MnNeDXg3Qao) 
 which I found really great. What stood out was Wade's gift for explaining confusing topics
- in a way that anyone could understand it. 
+ in a way that anyone could understand. 
  
- Few days later I googled dude's name and turned out him and Michael Nash are 
+ Few days later I googled dude's name and it turned out him and Michael Nash are 
 about to release a book called "Applied Akka Patterns". I skimmed through the table of contents 
 and was initially going to read only one chapter, but damn, this book turned out to be excellent and I had to read it cover to cover.
 
@@ -20,7 +20,7 @@ and was initially going to read only one chapter, but damn, this book turned out
 
 When I first started learning Akka I had so many questions and there was no one to answer.
 
-Should entire system be based on actor model or can I just use it in parts of it?
+Should entire system be based on actor model or can I just use it parts of it?
 How to deal with blocking operations? When to use futures and when to use actors?
 How does DDD fit into akka? How to monitor and find bottlenecks in akka based system? 
 Which operations deserve separate dispatcher? "Tell don't ask" - when should I use ask then? 
@@ -32,7 +32,7 @@ The book answers all those questions and many many more. It amazes me how much u
 Some books leave you with more questions than you had had before you grabbed it - not this one. There were numerous times when I was reading a paragraph and thought to myself "Oh, that's fine but what about...?" and then
 the answer was found right there on the next page. It almost feels like the authors took some beginner akka programmer, asked
 to read the chapter and write all the questions down.
-I also like how the book is very pragmatic - the theory is compressed to absolute minimum and almost all statements are backed up by practical examples - even chapter regarding DDD.
+I also like that the book is very pragmatic - the theory is compressed to absolute minimum and almost all statements are backed up by practical examples - even chapter regarding DDD.
 
 The book is full of useful information. Here are just some off the top of my head:
 
@@ -54,11 +54,11 @@ The book is full of useful information. Here are just some off the top of my hea
 
 ## For who?
 
-I feel like when getting started with akka you are given this massive set of tools and you have no idea
+I feel like when getting started with akka you are given this massive set of tools and you neither have an idea
 which ones are best suited for certain situations, nor what are best practices.
-There are gazillion of resources describing what is akka and how to get started with it. 
+There are gazillions of resources describing what is akka and how to get started with it. 
 What is lacking though are set of best practices and common patterns.
-Akka toolkit is really dangerous when put in a wrong hands. We, beginner/intermediate akka users, need those patterns and best practices 
+Akka toolkit is really dangerous when put in the wrong hands. We, beginner/intermediate akka users, need those patterns and best practices 
 compiled into one resource to protect against those mistakes. I think the book aims for this niche and nails it flawlessly.
 
 ## Final rant
