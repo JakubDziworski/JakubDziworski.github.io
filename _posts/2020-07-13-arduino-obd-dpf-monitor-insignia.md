@@ -84,7 +84,7 @@ where it is not visible. You will however need to disassemble panel that holds i
 ![LighterSockerCables](/assets/media/arduino_dpf_monitor_insignia/insignia_monitor_lighter_socket_cables.jpg)
 
 ## Plastic case
-This is the case that will lock in nicely into the hole that is next to the lighter socket in Opel Insignia. If you dont have a 3d printer
+You can download 3d model [here](https://www.tinkercad.com/things/6EkhNXzBm1v-insignia-dpf-monitor). It will lock in nicely into the hole that is next to the lighter socket in Opel Insignia. If you dont have a 3d printer
 you can buy/find existing case and cut hole for lcd.
 
 # Coding
