@@ -6,13 +6,10 @@ tags: [obd,arduino,insignia,dpf,bluetooth]
 fullview: true
 comments: true
 ---
-
-# Arduino OBD DPF monitor
-
-<iframe width="840" height="425"  src="https://www.youtube.com/embed/UeFjWw24aRw" frameborder="0" allowfullscreen></iframe>
-
 If you own a diesel car chances are you know about issues caused by unsupervised DPF burnouts.
 Knowing when DPF soot is going to be burned out and what is the current status of burning is crucial for keeping many vehicle components in good condition.
+
+<iframe width="840" height="425"  src="https://www.youtube.com/embed/UeFjWw24aRw" frameborder="0" allowfullscreen></iframe>
 
 ## Existing solutions for monitoring DPF
 
