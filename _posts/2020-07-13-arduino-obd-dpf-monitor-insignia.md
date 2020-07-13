@@ -99,6 +99,7 @@ We need to pull 3 types of data from a car:
 In case of Opel Insignia these are following PIDs - (`223274`, `223275`, `223277`).
 Finding PID codes for your car might be challenging. Personally I couldn't find anything online. 
 I ended up sniffing what commands are sent by [OPL DPF MONITOR](https://play.google.com/store/apps/details?id=com.insigniadpfgmail.opldpfmonitorfree) android app.
+I used a [method describere here](https://stackoverflow.com/questions/23877761/sniffing-logging-your-own-android-bluetooth-traffic) to sniff bluetooth traffic.
 
 PID is just a command that is understood by at least one of the car's module.
 Because above PIDs are not standardized we also need to provide header. Header is 
