@@ -11,7 +11,7 @@ Knowing when DPF soot is going to be burned out and what is the current status o
 
 <iframe width="840" height="425"  src="https://www.youtube.com/embed/UeFjWw24aRw" frameborder="0" allowfullscreen></iframe>
 
-## Existing solutions for monitoring DPF
+# Existing solutions for monitoring DPF
 
 How can you monitor it then? There are few ways:
 1. Having car that can display DPF information by default. Unfortunately most vehicles don't provide any information about DPF on dashboard (does anybody know why?).
@@ -24,7 +24,7 @@ drawback of this solution is we don't get to know DPF fill percentage, burning s
  This solution provides all the information we need. The drawback is we have to turn on app each time, connect to bluetooth and mount the phone in visible place.
  Whole process is too tedious for me to do every time. On top of that screen is active all the time which drains a lot of battery. We also can't use phone's bluetooth for other purposes (playing music etc.).
 
-## Arduino + OBD = <3 
+# Arduino + OBD = <3 
 
 We can however replace smartphone with arduino to display results on LCD.
 It will turn on, connect and turn off automatically when entering and leaving the car.
@@ -44,12 +44,12 @@ We're gonna need:
 Arduino uses HC-05 bluetooth module to communicate with OBD reader.
 Results are displayed on LCD which is also connected to arduino.
 
-## Wiring
+# Wiring
 
 ![WiringSchematic](/assets/media/arduino_dpf_monitor_insignia/dpf_monitor_schematic.png)
 ![WiringSchematicPhoto](/assets/media/arduino_dpf_monitor_insignia/insignia_monitor_wiring_photo.jpg)
 
-### HC-05 bluetooth module
+## HC-05 bluetooth module
 
 Communication between arduino and HC-05 module is done over UART. We don't want to use hardware serial (`RX,TX` pins) - 
 afaik if we did we wouldn't be able to debug using PC. Since we don't need super high speed software serial is more than enough so we can use any digital pin.
@@ -62,20 +62,20 @@ HC-05 will then be unable to connect with it and will need reconfiguration.
 In order to boot HC-05 into configuration mode it's 34pin has to be pulled HIGH (5v) and the module has to be reset. We use arduino
 digital pin 5 and 4 for that purposes.
 
-### Bluetooth configration button
+## Bluetooth configration button
 
 The purpose of button is to allow user to trigger HC-05 configuration. It's required after new OBD reader is used or existing
 OBD reader was used with different device.
 
-### On/off switch
+## On/off switch
 Even though the device will automatically turn itself on and off when user enters/leaves the car (it's using same circuit as 12v lighter socket)
  it's a nice feature to have.
 
-### LCD
+## LCD
 2x16 LCD alone requires a lot of wires to work with arduino. It's easier to solder `i2c` converter to it and just connect 2
 wires to arduino.
 
-### Lighter socket power supply
+## Lighter socket power supply
 In my opinion 12v lighter socket is the best source of power. It will turn on when ignition is turned on. It will turn off
 when user leaves car (opens door after turning off engine). In case of Insignia it is also in a very convenient place. Next to the
 lighter socket there is handy hole that we can use for placing and hiding guts of our device. It's very easy to solder directly to lighter socket on the back
@@ -83,7 +83,11 @@ where it is not visible. You will however need to disassemble panel that holds i
 
 ![LighterSockerCables](/assets/media/arduino_dpf_monitor_insignia/insignia_monitor_lighter_socket_cables.jpg)
 
-## Coding
+## Plastic case
+This is the case that will lock in nicely into the hole that is next to the lighter socket in Opel Insignia. If you dont have a 3d printer
+you can buy/find existing case and cut hole for lcd.
+
+# Coding
 
 [Click here to get full code from github.](https://github.com/JakubDziworski/insignia-dpf-monitor)
 
@@ -137,7 +141,7 @@ message = "FILL: ";
 message = message + dirtLevel + "%";
 lcd.print(message);
 ```
-## HC-05 configuration
+# HC-05 auto-configuration
 
 In order to pair HC-05 module with OBD reader it needs to be launched in configuration mode. This is done by either
 pressing and holding button on the HC-05 module or setting pin 34 to high when powering. 
@@ -151,7 +155,3 @@ sendCommand("AT+PAIR=86DC,3D,ABF7F1,20",10000L);
 sendCommand("AT+LINK=86DC,3D,ABF7F1",10000L);
 ```
 Don't worry if `AT+INIT` command returns ERROR. It's "normal" for v3 module according to online resources :).
-
-## Plastic case
-This is the case that will lock in nicely into the hole that is next to the lighter socket in Opel Insignia. If you dont have a 3d printer
-you can buy/find existing case and cut hole for lcd.
