@@ -7,14 +7,14 @@ fullview: true
 comments: true
 ---
 
-#Arduino OBD DPF monitor
+# Arduino OBD DPF monitor
 
 <iframe width="840" height="425"  src="https://www.youtube.com/embed/UeFjWw24aRw" frameborder="0" allowfullscreen></iframe>
 
 If you own a diesel car chances are you know about issues caused by unsupervised DPF burnouts.
 Knowing when DPF soot is going to be burned out and what is the current status of burning is crucial for keeping many vehicle components in good condition.
 
-##Existing solutions for monitoring DPF
+## Existing solutions for monitoring DPF
 
 How can you monitor it then? There are few ways:
 1. Having car that can display DPF information by default. Unfortunately most vehicles don't provide any information about DPF on dashboard (does anybody know why?).
@@ -27,7 +27,7 @@ drawback of this solution is we don't get to know DPF fill percentage, burning s
  This solution provides all the information we need. The drawback is we have to turn on app each time, connect to bluetooth and mount the phone in visible place.
  Whole process is too tedious for me to do every time. On top of that screen is active all the time which drains a lot of battery. We also can't use phone's bluetooth for other purposes (playing music etc.).
 
-##Arduino + OBD = <3 
+## Arduino + OBD = <3 
 
 We can however replace smartphone with arduino to display results on LCD.
 It will turn on, connect and turn off automatically when entering and leaving the car.
