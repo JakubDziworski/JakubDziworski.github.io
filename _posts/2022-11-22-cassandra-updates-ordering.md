@@ -198,7 +198,7 @@ UPDATE ordering_test.ordering_test SET value = 'value_1' where key = 'key' IF EX
 By using lightweight transactions the actual ordering of updates is respected and the final value is indeed `value_2` as we would expect.
 However, since paxos is used, a lot of communication between nodes is required to achieve consensus which probably has serous performance implications.
 
-## What can we do about it
+## What can we do about it?
 
 We should try to keep our servers clocks in sync. Both clients and Cassandra servers. Properly configured NTP, however, doesn't guarantee that there will be no problems
 mentioned above as there can always be some small drifts. Here are few ideas I came up wth to eliminate or at least reduce to minimum clock related issues:
@@ -207,3 +207,5 @@ mentioned above as there can always be some small drifts. Here are few ideas I c
 * Use `USING TIMESTAMP` in your `INSERT`/`UPDATE` explicitly. If your data already has some notion of timestamps/ordering key you can use it to set timestamp on a row explicitly.
 * Use lightweight transactions, but be aware of decreased performance.
 * If possible, model your column using `COUNTER` type (however it has another set of limitations and quirks).
+
+If I missed something or some of my conclusions are wrong please let me know in the comments. 
