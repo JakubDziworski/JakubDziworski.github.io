@@ -37,7 +37,7 @@ if there are concurrent updates (and uses timestamp for that). I came to this co
 
 It was not sure if my understanding of documentation is correct, so I decided to test that.
 
-## No logical ordering, only timestamps
+## No logical ordering, only timestamps matter
 
 Turns out my assumptions were wrong and conflict resolutions occur even when there are no concurrent updates. If a single client sends updates to
 Cassandra cluster (sequentially with `CONSISTENCY=ALL`) there is no guarantee that the final value is going to be the last
@@ -71,7 +71,7 @@ share clock with host, all the cassandra nodes are perfectly in sync. In order t
 I also had to make a small tweak to the `cqlsh.py` to make sure server timestamps are used: `self.session.use_client_timestamp=False`.
 
 After starting the cluster and creating test tables I run following script:
-```
+```SHELL
 docker exec -it cass1 cqlsh -e "CONSISTENCY ALL; INSERT INTO ordering_test.ordering_test(key, value) VALUES('key', 'value_1')"
 echo "Inserted 'value_1'"
 
@@ -87,7 +87,7 @@ The first insert statement is sent to `cass1` while second statement is sent to 
 Since consistency is set to `ALL` and queries are executed sequentially (there is no concurrency) it's logical to expect that the final value
 would be `value_2`, right? However, **since `cass2` clock is 3 seconds behind `cass1`, `value_1` has greater timestamp than `value_2` and
 final result is `value_1`**:
-```CQL
+```SHELL
 Consistency level set to ALL.
 Inserted 'value_1'
 
@@ -107,7 +107,7 @@ feature, but it's worth testing. `cass3` (which is used for performing select at
 If there was MVCC-like feature present, the select should therefore return an empty value.
 After all, when `cass3` performs select, there is no value with timestamp <= `cass3`'s timestamp.
 We can debug this by adding `SELECT dateof(now()) FROM system.local` to each command like so:
-```
+```SHELL
 docker exec -it cass1 cqlsh -e "CONSISTENCY ALL; INSERT INTO ordering_test.ordering_test(key, value) VALUES('key', 'value_1'); SELECT dateof(now()) FROM system.local"
 echo "Inserted 'value_1'"
 
@@ -118,7 +118,7 @@ docker exec -it cass3 cqlsh -e "CONSISTENCY ALL; SELECT dateof(now()) FROM syste
 ```
 Results:
 
-```
+```SHELL
 Consistency level set to ALL.
 
  system.dateof(system.now())
@@ -192,7 +192,7 @@ by some delta (They can't be set to specific value). Since counter can only be u
 
 Cassandra supports lightweight transactions that are using paxos in order to achieve a consensus for a new value proposed by one of the nodes.
 In our example, it can be triggered by using `IF EXISTS` like so:
-```
+```SHELL
 UPDATE ordering_test.ordering_test SET value = 'value_1' where key = 'key' IF EXISTS
 ```
 By using lightweight transactions the actual ordering of updates is respected and the final value is indeed `value_2` as we would expect.
