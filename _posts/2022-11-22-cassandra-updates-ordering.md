@@ -7,9 +7,9 @@ fullview: true
 comments: true
 ---
 When faced with a task of picking a database for a project we need to consider a lot of tradeoffs.
-While this task by itself is hard enough, finding all the limitations of each database is even harder.
-It's often the case that some database behaviors which have huge impact on our use case are buried deep in the documentation or even
-require diving into the codebase. For me personally, one of those surprising behaviors was the way Cassandra handles updates conflict resolution.
+Finding **and fully understanding** the limitations and implications of using each candidate databases is very hard.
+It's often the case that some database behaviors, which have huge impact on our use case, are buried deep in the documentation or even
+require diving into the codebase. For me personally, one of those unexpected behaviors was the way Cassandra updates ordering works.
 
 ## Ordering is tricky
 
