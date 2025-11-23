@@ -16,7 +16,7 @@ The revision described in this post is **[83102b4c3f979c8d3e82abe35c91d3b14d37f1
 I defined a new rule called "**returnStatement**". 
 
 You may wonder why is it not "returnExpression"?
-After all an expression is something that evaluates to a value (as described in [the previous post](http://jakubdziworski.github.io/enkel/2016/04/10/enkel_8_arthimetic.html) ) . Doesn't a return statement evaluate to a value?
+After all an expression is something that evaluates to a value (as described in [the previous post](https://jakubdziworski.github.io/enkel/2016/04/10/enkel_8_arthimetic.html) ) . Doesn't a return statement evaluate to a value?
 
 This may seem confusing but it turns out that return does not evaulate to a value.
 In Java the following code would not make sens:

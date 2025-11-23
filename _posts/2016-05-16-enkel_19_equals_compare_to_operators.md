@@ -65,7 +65,7 @@ Instead of wishing let's just implement it then!
 
 ## Implementing  bytecode generation for ConditionalExpression
 
-In [Creating JVM language [PART 10] - Conditional statements](http://jakubdziworski.github.io/enkel/2016/04/16/enkel_10_if_statement.html)
+In [Creating JVM language [PART 10] - Conditional statements](https://jakubdziworski.github.io/enkel/2016/04/16/enkel_10_if_statement.html)
 I introduced a way to compare primitive objects. The post describes
 how the compare operators are created. The only thing that needs to be changed
 is bytecode generation step.

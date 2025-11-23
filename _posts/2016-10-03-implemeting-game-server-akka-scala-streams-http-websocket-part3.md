@@ -14,4 +14,4 @@ The remaining piece of the puzzle is client side which is next part's subject.
 
 Code: [https://github.com/JakubDziworski/Akka-Streams-Websocket-Game-Server](https://github.com/JakubDziworski/Akka-Streams-Websocket-Game-Server)
 
-Other parts: [Implementing Websocket Game Server with Scala and Akka Streams](http://jakubdziworski.github.io/categories.html#Game-Server-with-Scala-and-Akka-Streams-ref)
+Other parts: [Implementing Websocket Game Server with Scala and Akka Streams](https://jakubdziworski.github.io/categories.html#Game-Server-with-Scala-and-Akka-Streams-ref)

@@ -20,4 +20,4 @@ Next time I'm going to do one thing at the time and then merge it in post-produc
 
 Code: [https://github.com/JakubDziworski/Akka-Streams-Websocket-Game-Server](https://github.com/JakubDziworski/Akka-Streams-Websocket-Game-Server)
 
-Other parts: [Implementing Websocket Game Server with Scala and Akka Streams](http://jakubdziworski.github.io/categories.html#Game-Server-with-Scala-and-Akka-Streams-ref)
+Other parts: [Implementing Websocket Game Server with Scala and Akka Streams](https://jakubdziworski.github.io/categories.html#Game-Server-with-Scala-and-Akka-Streams-ref)

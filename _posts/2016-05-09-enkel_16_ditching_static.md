@@ -57,7 +57,7 @@ The start method is basically non-static version of main method.
 
 ### INVOKESTATIC vs INVOKEVIRTUAL
 
-In [Creating JVM language [PART 7] - Methods](http://jakubdziworski.github.io/enkel/2016/04/05/enkel_7_methods.html) 
+In [Creating JVM language [PART 7] - Methods](https://jakubdziworski.github.io/enkel/2016/04/05/enkel_7_methods.html) 
 I used ```INVOKESTATIC``` for invoking methods. It's time to change it to **```INVOKEVIRTUAL```**.
 
 There is one important difference between both of them - **```INVOKEVIRTUAL``` requires owner**.

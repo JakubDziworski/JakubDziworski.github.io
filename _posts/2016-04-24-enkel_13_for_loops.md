@@ -126,7 +126,7 @@ Once the ```RangedForStatement``` has been created it is time to pull some infor
 from it and generate bytecode. 
 
 There are no special jvm instructions for loops. One way to do that is to use
- control flow (conditional and unconditional) instructions (described in [Creating JVM language [PART 10] - Conditional statements](http://jakubdziworski.github.io/enkel/2016/04/16/enkel_10_if_statement.html)).
+ control flow (conditional and unconditional) instructions (described in [Creating JVM language [PART 10] - Conditional statements](https://jakubdziworski.github.io/enkel/2016/04/16/enkel_10_if_statement.html)).
 
 
 ```java

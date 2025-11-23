@@ -17,7 +17,7 @@ Previously I used listener pattern to implement Enkel parser.
 There is hovewer another way to do that - Visitor. To enabled it specify ```-visitor``` on the commnad line.
 
 I was kind of curious which one would be more suitable for Enkel so I created a small project that exposes the differences.
-Check out **[this blog post ](http://jakubdziworski.github.io/java/2016/04/01/antlr_visitor_vs_listener.html)** where you can read full comparison and get sources.
+Check out **[this blog post ](https://jakubdziworski.github.io/java/2016/04/01/antlr_visitor_vs_listener.html)** where you can read full comparison and get sources.
 
 The main benefit is that Visitor returns value where Listener does not:
 

@@ -59,7 +59,7 @@ Mixing named and unnamed arguments is not allowed.
 
 ## Reordering arguments
 
-As described in [Creating JVM language [PART 7] - Methods](http://jakubdziworski.github.io/enkel/2016/04/05/enkel_7_methods.html)
+As described in [Creating JVM language [PART 7] - Methods](https://jakubdziworski.github.io/enkel/2016/04/05/enkel_7_methods.html)
 , method parsing process is divided into two steps. First it finds all the signatures (declarations), and once it's done it starts parsing the bodies.
 It is guaranteed that during parsing method bodies all the signatures are already available.
 
