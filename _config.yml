@@ -31,6 +31,6 @@ author:
 rss_path: feed.xml
 categories_path: categories.html
 tags_path: tags.html
-BASE_PATH: http://jakubdziworski.github.io
+BASE_PATH: https://jakubdziworski.github.io
 
 gems: [jekyll-paginate]
